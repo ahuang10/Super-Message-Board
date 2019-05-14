@@ -18,6 +18,12 @@ console.log(announcements);
 localStorage.setItem('announcements', JSON.stringify(announcements))
 function loadAnnouncements() {
     let announcements = JSON.parse(localStorage.getItem('announcements'))
+<<<<<<< HEAD
+=======
+    if(!announcements){
+      announcements=[];
+    }
+>>>>>>> 28b18cdd32085aabd08163d3f7354b9725876c63
     return announcements;
 }
 
@@ -25,7 +31,7 @@ function setupAnnouncements() {
     let currentAnnouncements = loadAnnouncements();
     let titles = document.querySelector("#annoucement-titles");
     let submitBtn = document.querySelector('#announcement-submit');
-
+  //  if(currentAnnouncements)
     for (let i = 0; i < currentAnnouncements.length; i++) {
         let li = document.createElement('li');
 
