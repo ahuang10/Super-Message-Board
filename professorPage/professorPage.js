@@ -19,9 +19,8 @@ window.onload = function () {
 status();
 
 function setupOffice(){
-  let name = document.querySelector('#name');
-  name.innerHTML = `${JSON.parse(localStorage.getItem('professorName'))}'s
-  Office`;
+  var name = document.querySelector('#name');
+name.innerHTML = `${JSON.parse(localStorage.getItem('professorName'))}'s Office`;
 }
 
 //the orginal slideIndex
@@ -53,7 +52,9 @@ function ohButton() {
 //Status function, changes the appearnce based on the boolean "here" value
 function status() {
   let here = JSON.parse(localStorage.getItem('officeStatus'))
-  
+  if(here == null) {
+      return;
+  }
   if (here.status == "false") {
     if (here.hours == ""){
       here.hours = 0

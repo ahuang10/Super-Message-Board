@@ -1,24 +1,24 @@
-//title: 'xxxx', description: 'xxx', photo:'/folder'
-// let announcements = [{
-//         title: 'Test1',
-//         description: 'Test Description',
-//         photo: '../settings/assets/stock1.jpg'
-//     },
-//     {
-//         title: 'Test2',
-//         description: 'Test Description',
-//         photo: '../settings/assets/stock2.png'
-//     },
-//     {
-//         title: 'Test3',
-//         description: 'Test Description',
-//         photo: '../settings/assets/stock3.jpg'
-//     },
-// ];
-// localStorage.setItem('announcements', JSON.stringify(announcements))
+////title: 'xxxx', description: 'xxx', photo:'/folder'
+var announcements = [{
+         "title": 'Test1',
+         "description": 'Test Description',
+         "photo": '../settings/assets/stock1.jpg'
+     },
+     {
+         "title": 'Test2',
+         "description": 'Test Description',
+         "photo": '../settings/assets/stock2.png'
+     },
+     {
+         "title": 'Test3',
+         "description": 'Test Description',
+         "photo": '../settings/assets/stock3.jpg'
+     }];
+console.log(announcements);
+localStorage.setItem('announcements', JSON.stringify(announcements))
 function loadAnnouncements() {
-    let announcemnets = JSON.parse(localStorage.getItem('announcements'))
-    return announcemnets;
+    let announcements = JSON.parse(localStorage.getItem('announcements'))
+    return announcements;
 }
 
 function setupAnnouncements() {

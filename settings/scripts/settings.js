@@ -16,7 +16,7 @@ let currentStudent;
 let numInQueue = 0;
 
 window.onload = function () {
-    // resetStorage();
+    resetStorage();
     setup();
 }
 
